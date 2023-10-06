@@ -20,7 +20,7 @@ langkah2 dan logika
 
 langkah percobaan postman dan Swagger
 1. POST http://localhost:3000/users/signin
-body json: pake email dan password dari Database users {"email" : "oainger0@craigslist.org", "password" : "KcAk6Mrg7DRM"}
+body json: pake email dan password dari Database users misalnya : {"email" : "oainger0@craigslist.org", "password" : "KcAk6Mrg7DRM"}
 lalu copy accessToken
 
 2. GET http://localhost:3000/movies?page=1&limit=5
