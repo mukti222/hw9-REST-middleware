@@ -1,16 +1,23 @@
 
-
-
 //PROTEKSI MIDDLEWARE
 const jwt = require ('jsonwebtoken');
 // const accessToken = require('../routes/users')
 
 function authenticateToken(req, res, next) {
-  //ambil token dari HEADER
-  const token = req.headers.authorization || req.cookies.accessToken;
+  const tokenHeader = req.headers.authorization || req.cookies.accessToken;
+  console.log(tokenHeader);
 
-  if (!token) { //tanpa token tidak diizinkan
-    return res.status(401).json({ message: 'Unauthorized' });}
+  if (!tokenHeader) {
+    return res.status(401).json({ message: 'Unauthorized' });
+  }
+
+  let token = tokenHeader;
+  
+  // apakah token ada "Bearer " jika ya maka hilangin
+  if (tokenHeader.startsWith('Bearer ')) {
+    token = tokenHeader.slice(7);
+  }
+
   //apakah token berasal dari AOKWKWK
   jwt.verify(token, 'AOKWAWK', (err, user) => {
     if (err) {
@@ -21,4 +28,6 @@ function authenticateToken(req, res, next) {
   });
 }
 
-module.exports =  {authenticateToken} ;
+
+module.exports = { authenticateToken };
+
