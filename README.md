@@ -5,6 +5,7 @@ npm i body-parser
 npm i jsonwebtoken
 npm i cookie-parser
 npm i swagger-ui-express swagger-jsdoc
+npm i morgan
 
 
 langkah2 dan logika
