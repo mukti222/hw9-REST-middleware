@@ -11,7 +11,7 @@ npm i morgan
 langkah2 dan logika
 1. buat koneksi pool DB di query.js
 2. buat CRUD get, put, post, delete (movie.js)
-3. buat generatetoken pake jwt di (auth.js) 
+3. buat generatetoken pake jwt di (generate.js) 
 4. buat users/signin yang isinya generatetoken (nanti mengubah email, password jdi token unik)
 5. buat middleware utk autentifikasi jwt.VERIFY token unik tadi dan fungsi next() di middleware.js
 6. implementasikan middleware di movie.js (CRUD)
