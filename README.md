@@ -30,3 +30,6 @@ Berhasil get movie
 klik Authorization KUNCI HIJAU
 post /users/signin
 get /movies
+
+![Screenshot 2023-10-06 140838](https://github.com/mukti222/hw9-REST-middleware/assets/135799527/d6e7fdee-0cfa-4098-82c6-088d92479363)
+
